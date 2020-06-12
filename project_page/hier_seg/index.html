@@ -1,0 +1,295 @@
+<html><head>
+  <meta name="generator" content="HTML Tidy for Linux (vers 25 March 2009), see www.w3.org">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="Learning Hierarchical Shape Segmentation and Labeling from Online Repositories">
+  <meta name="description" content="Homepage for Learning Hierarchical Shape Segmentation and Labeling from Online Repositories">
+  <meta name="robots" content="index, follow, noarchive">
+  <meta name="googlebot" content="noarchive">
+  <style type="text/css">
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+        A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+        A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+        A.info:hover    {color:green;background:transparent;text-decoration:underline}
+  </style>
+
+  <title>Learning Hierarchical Shape Segmentation and Labeling from Online Repositories</title>
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29714225-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+  <table align="center" width="800" border="0" summary="">
+  <tbody><tr>
+      <td>
+	  <a href="http://cs.stanford.edu/~ericyi/">Home</a>
+      </td>
+  </tr>
+  </tbody></table>
+
+  <h1 align="center">Learning Hierarchical Shape Segmentation and Labeling <br> from Online Repositories<font size="+2"></font></h1>
+
+ <tr>
+      <td>&nbsp;</td>
+</tr>
+
+  <table align="center" width="800" border="0" summary="">
+    <tbody><tr>
+      <td align="center">
+        <h2 align="center"><a href="https://s2017.siggraph.org" target="_blank">SIGGRAPH 2017</a></h2>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center">
+        <p><a href="http://cs.stanford.edu/~ericyi/">Li Yi</a><sup>1</sup> &nbsp;&nbsp;
+	<a href="http://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a><sup>1</sup>&nbsp;&nbsp;
+	<a href="http://www.dgp.toronto.edu/~hertzman">Aaron Hertzmann</a><sup>2</sup>&nbsp;&nbsp;
+	<a href="http://vovakim.com/">Vladimir G. Kim</a><sup>2</sup> &nbsp;&nbsp;
+	<a href="http://ai.stanford.edu/~haosu/">Hao Su</a><sup>1</sup>&nbsp;&nbsp;
+	<a href="http://www.meyumer.com">Ersin Yumer</a><sup>2</sup>&nbsp;&nbsp;
+
+	<br>
+
+        <sup>1</sup><span lang="EN-US"><a href="http://www.stanford.edu/">Stanford University</a></span> &nbsp;&nbsp;
+        <sup>2</sup><span lang="EN-US"><a href="https://research.adobe.com/">Adobe Research</a></span> &nbsp;&nbsp;
+	</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td align="center">
+        <p><a href="http://cs.stanford.edu/~ericyi/project_page/hier_seg/figures/teaser.jpg"><img src="http://cs.stanford.edu/~ericyi/project_page/hier_seg/figures/teaser.jpg" width="800" alt=""></a><br>
+    
+	</p>
+
+        <p align="left"><b>Figure 1</b>: Large online model repositories contain abundant additional data beyond 3D geometry, such as part labels and artist's part decompositions, flat or hierarchical.
+We tap into this trove of sparse and noisy noisy data to train a network for simultaneous hierarchical shape structure decomposition and labeling.  Our method learns to take new geometry, and segment it into parts, label the parts, and place them in a hierarchy. In this paper, we visualize scene graphs with a circular visualization, in which the root node is near the center. Blue lines indicate parent-child relationships, and red dashed arcs connect siblings.  The input geometry in online databases are broken as connected components, visualized in the input as random colors.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+    
+    <tr>
+      <td>
+        <h1>Abstract</h1><br> 
+	<p>We propose a method for converting geometric shapes into hierarchically segmented parts with part labels. Our key idea is to train category-specific models from the scene graphs and part names that accompany 3D shapes in public repositories. These freely-available annotations represent an enormous, untapped source of information on geometry. However, because the models and corresponding scene graphs are created by a wide range of modelers with different levels of expertise, modeling tools, and objectives, these models have very inconsistent segmentations and hierarchies with sparse and noisy textual tags. Our method involves two analysis steps. First, we perform a joint optimization to simultaneously cluster and label parts in the database while also inferring a canonical tag dictionary and  part hierarchy. We then use this labeled data to train a method for hierarchical segmentation and labeling of new 3D shapes. We demonstrate that our method can mine complex information, detecting hierarchies in man-made objects and their constituent parts, obtaining finer scale details than existing alternatives. We also show that, by performing domain transfer using a few supervised examples, our technique outperforms fully-supervised  techniques that require hundreds of manually-labeled models.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+<!--
+    <tr>
+      <td>
+        <h1>Paper</h1>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="http://cs.stanford.edu/~ericyi/papers/part_annotation_16.pdf">PDF(23.2MB)</a>&nbsp;&nbsp;&nbsp;<a href="http://cs.stanford.edu/~ericyi/papers/part_annotation_16_small.pdf">PDF(6.8MB)</a>&nbsp;&nbsp;&nbsp;<a href="http://cs.stanford.edu/~ericyi/papers/part_annotation_16_supplemental.pdf">Supplemental</a></td>
+    </tr>
+
+
+    <tr>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td>
+        <h1>Pipeline</h1>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td><a href="http://cs.stanford.edu/~ericyi/project_page/part_annotation//figures/pipelineNew.png"><img src="http://cs.stanford.edu/~ericyi/project_page/part_annotation/figures/pipelineNew.png" width="800" alt=""></a></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p align="left"><b>Figure 2</b>: This figure summarizes our pipeline. Given the input dataset we select annotation set and use our UI to obtain human labels. We automatically propagate these labels to the rest of the shapes and then query the users to verify most confident propagations. We then use these verifications to improve our propagation technique.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+-->
+    <tr>
+      <td>
+        <h1>Results</h1>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td align="center"><a href="http://cs.stanford.edu/~ericyi/project_page/hier_seg/figures/hier_seg_results.jpg"><img src="http://cs.stanford.edu/~ericyi/project_page/hier_seg/figures/hier_seg_results.jpg" width="800" alt=""></a></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p align="left"><b>Figure 2</b>: Hierarchical segmentation results. In each case, the input is a geometric shape. Our method automatically determines the segmentation into parts, the part labels and the hierarchy.
+        </p>
+      </td>
+    </tr>
+
+	
+	<tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td>
+        <h1>Paper</h1>
+	<p><a href="http://arxiv.org/abs/1705.01661">Arxiv</a></p>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <h1>Code and Data</h1>
+        <p><a href=https://shapenet.cs.stanford.edu/ericyi/hier_seg_code.zip>Code</a></p>
+        <p><a href=https://shapenet.cs.stanford.edu/ericyi/hier_seg_data.zip>Data</a></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+<!--
+    <TR>
+      <TD>
+        <H1>Acknowledgements</H1>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD>
+	    <P align="justify">We would like to thank Guowei Wan for initial experiments on this project and Dror Aiger for inspiring discussions.</P>
+	  </TD>
+    </TR>
+
+    <TR>
+      <TD>&nbsp;</TD>
+
+      <TD>&nbsp;</TD>
+
+      <TD>&nbsp;</TD>
+    </TR>
+-->
+
+    <tr>
+      <td>
+        <h1>BibTex</h1>
+	@article{Yi17,<br> 
+Author = {Li Yi and Leonidas Guibas and Aaron Hertzmann and Vladimir G. Kim and Hao Su and Ersin Yumer}, <br>
+Journal = {SIGGRAPH},<br> 
+Title = {Learning Hierarchical Shape Segmentation and Labeling from Online Repositories}, <br>
+Year = {2017}}  
+      </td>
+    </tr>
+
+<!--
+    <TR>
+      <TD><CODE>@INPROCEEDINGS{2D3DFusion2011,<BR>
+      &nbsp;&nbsp;title = {2D-3D Fusion for Layer Decomposition of Urban Facades},<BR>
+      &nbsp;&nbsp;author = {Hao Su and Qixing Huang and Niloy J. Mitra and Yangyan Li and Leonidas Guibas},<BR>
+	  &nbsp;&nbsp;booktitle = {Computer Vision (ICCV), 2011 IEEE International Conference on},<BR>
+      &nbsp;&nbsp;pages = {882-889},<BR>
+      &nbsp;&nbsp;year = {2011},<BR>
+	  &nbsp;&nbsp;month = November,<BR>
+	  &nbsp;&nbsp;address = {Barcelona, Spain} <BR>
+	  &nbsp;&nbsp;doi={10.1109/ICCV.2011.6126329}, <br>
+	  &nbsp;&nbsp;ISSN={1550-5499},<br>
+      }</CODE></TD>
+    </TR>
+
+    <TR>
+      <TD>&nbsp;</TD>
+
+      <TD>&nbsp;</TD>
+
+      <TD>&nbsp;</TD>
+    </TR>
+-->
+  </tbody></table>
+
+
+
+</body></html>

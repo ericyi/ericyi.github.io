@@ -1,0 +1,304 @@
+<html><head>
+  <meta name="generator" content="HTML Tidy for Linux (vers 25 March 2009), see www.w3.org">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="A Scalable Active Framework for Region Annotation in 3D Shape Collections">
+  <meta name="description" content="Homepage for A Scalable Active Framework for Region Annotation in 3D Shape Collections">
+  <meta name="robots" content="index, follow, noarchive">
+  <meta name="googlebot" content="noarchive">
+  <style type="text/css">
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+        A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+        A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+        A.info:hover    {color:green;background:transparent;text-decoration:underline}
+  </style>
+
+  <title>A Scalable Active Framework for Region Annotation in 3D Shape Collections</title>
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29714225-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+  <table align="center" width="800" border="0" summary="">
+  <tbody><tr>
+      <td>
+	  <a href="http://cs.stanford.edu/~ericyi/">Home</a>
+      </td>
+  </tr>
+  </tbody></table>
+
+  <h1 align="center">A Scalable Active Framework <br> for Region Annotation in 3D Shape Collections<font size="+2"></font></h1>
+
+ <tr>
+      <td>&nbsp;</td>
+</tr>
+
+  <table align="center" width="800" border="0" summary="">
+    <tbody><tr>
+      <td align="center">
+        <h2 align="center"><a href="https://sa2016.siggraph.org/en/" target="_blank">SIGGRAPH Asia 2016</a></h2>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center">
+        <p><a href="http://cs.stanford.edu/~ericyi/">Li Yi</a><sup>1</sup> &nbsp;&nbsp;
+	<a href="http://vovakim.com/">Vladimir G. Kim</a><sup>1,2</sup> &nbsp;&nbsp;
+	<a href="http://www.duygu-ceylan.com/">Duygu Ceylan</a><sup>2</sup> &nbsp;&nbsp;
+	<a href="https://www.cs.ubc.ca/~ichaos/">I-Chao Shen</a><sup>3</sup>&nbsp;&nbsp;
+	<a "">Mengyuan Yan</a><sup>1</sup>&nbsp;&nbsp;
+  <br>
+  <a href="http://ai.stanford.edu/~haosu/">Hao Su</a><sup>1</sup>&nbsp;&nbsp;
+  <a href="http://web.stanford.edu/~lucewu/WWW.html">Cewu Lu</a><sup>1</sup>&nbsp;&nbsp;
+  <a href="http://www.cs.utexas.edu/~huangqx/">Qixing Huang</a><sup>4,5</sup>&nbsp;&nbsp;
+  <a href="http://www.cs.ubc.ca/~sheffa/">Alla Sheffer</a><sup>3</sup>&nbsp;&nbsp;
+  <a href="http://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a><sup>1</sup>&nbsp;&nbsp;
+	<br>
+
+        <sup>1</sup><span lang="EN-US"><a href="http://www.stanford.edu/">Stanford University</a></span> &nbsp;&nbsp;
+        <sup>2</sup><span lang="EN-US"><a href="https://research.adobe.com/">Adobe Research</a></span> &nbsp;&nbsp;
+        <sup>3</sup><span lang="EN-US"><a href="https://www.ubc.ca/">University of British Columbia
+</a></span> &nbsp;&nbsp;
+        <sup>4</sup><span lang="EN-US"><a href="http://www.ttic.edu/">TTI Chicago</a></span> &nbsp;&nbsp;
+        <sup>5</sup><span lang="EN-US"><a href="http://www.utexas.edu/">UT Austin</a></span> &nbsp;&nbsp;
+	</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td align="center">
+        <p><a href="http://cs.stanford.edu/~ericyi/project_page/part_annotation/figures/teaser4.png"><img src="http://cs.stanford.edu/~ericyi/project_page/part_annotation/figures/teaser4.png" width="800" alt=""></a><br>
+    
+	</p>
+
+        <p align="left"><b>Figure 1</b>: We use our method to create detailed per-point labeling of 31963 models in 16 shape categories in ShapeNetCore.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>
+        <h1>Video</h1><br> 
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/8MNM0xiovVk" frameborder="0" allowfullscreen></iframe>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/LJGTamBV0go" frameborder="0" allowfullscreen></iframe>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td>
+        <h1>Abstract</h1><br> 
+	<p>Large repositories of 3D shapes provide valuable input for data- driven analysis and modeling tools. They are especially powerful once annotated with semantic information such as salient regions and functional parts. We propose a novel active learning method capable of enriching massive geometric datasets with accurate se- mantic region annotations. Given a shape collection and a user- specified region label our goal is to correctly demarcate the corre- sponding regions with minimal manual work. Our active frame- work achieves this goal by cycling between manually annotating the regions, automatically propagating these annotations across the rest of the shapes, manually verifying both human and automatic annotations, and learning from the verification results to improve the automatic propagation algorithm. We use a unified utility func- tion that explicitly models the time cost of human input across all steps of our method. This allows us to jointly optimize for the set of models to annotate and for the set of models to verify based on the predicted impact of these actions on the human effi- ciency. We demonstrate that incorporating verification of all pro- duced labelings within this unified objective improves both accu- racy and efficiency of the active learning procedure. We automati- cally propagate human labels across a dynamic shape network us- ing a conditional random field (CRF) framework, taking advantage of global shape-to-shape similarities, local feature similarities, and point-to-point correspondences. By combining these diverse cues we achieve higher accuracy than existing alternatives. We validate our framework on existing benchmarks demonstrating it to be sig- nificantly more efficient at using human input compared to previous techniques. We further validate its efficiency and robustness by an- notating a massive shape dataset, labeling over 93,000 shape parts, across multiple model classes, and providing a labeled part collec- tion more than one order of magnitude larger than existing ones.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td>
+        <h1>Paper</h1>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="http://cs.stanford.edu/~ericyi/papers/part_annotation_16.pdf">PDF(23.2MB)</a>&nbsp;&nbsp;&nbsp;<a href="http://cs.stanford.edu/~ericyi/papers/part_annotation_16_small.pdf">PDF(6.8MB)</a>&nbsp;&nbsp;&nbsp;<a href="http://cs.stanford.edu/~ericyi/papers/part_annotation_16_supplemental.pdf">Supplemental</a></td>
+    </tr>
+
+
+    <tr>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td>
+        <h1>Pipeline</h1>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td><a href="http://cs.stanford.edu/~ericyi/project_page/part_annotation//figures/pipelineNew.png"><img src="http://cs.stanford.edu/~ericyi/project_page/part_annotation/figures/pipelineNew.png" width="800" alt=""></a></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p align="left"><b>Figure 2</b>: This figure summarizes our pipeline. Given the input dataset we select annotation set and use our UI to obtain human labels. We automatically propagate these labels to the rest of the shapes and then query the users to verify most confident propagations. We then use these verifications to improve our propagation technique.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td>
+        <h1>Results</h1>
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td align="center"><a href="http://cs.stanford.edu/~ericyi/project_page/part_annotation/figures/categoriesNumbers.png"><img src="http://cs.stanford.edu/~ericyi/project_page/part_annotation/figures/categoriesNumbers.png" width="400" alt=""></a></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p align="left"><b>Figure 3</b>: We use our method to get part labels for more than 30,000 models in 16 shape categories in ShapeNetCore. We denote the number of models in each category in parentheses.
+        </p>
+      </td>
+    </tr>
+
+	
+	<tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td>
+        <h1>Code and Data</h1>
+        <p><b>Code</b> TBA</p>
+        <p><b>Data</b> An official release of our part annotation data will come with the next release of <a href="https://shapenet.cs.stanford.edu">ShapeNet</a>. But you can get an pre-release version <a href="https://shapenet.cs.stanford.edu/ericyi/shapenetcore_partanno_v0.zip">here</a> (1.08GB). Notice you might want to get the corresponding 3D models from <a href="https://shapenet.cs.stanford.edu">ShapeNet</a>. Thanks to Kalogerakis et al., a per-face part labeling for ShapeNetCore meshes could be downloaded <a href="http://people.cs.umass.edu/~kalo/papers/shapepfcn/index.html">here</a>.</p>
+        <p><b>News</b> We re-organize our data so that it could be used as a segmentation benchmark more conveniently. Only expert verified segmentations are included and the official training/test split from ShapeNet is also provided. Please download the data <a href="https://shapenet.cs.stanford.edu/ericyi/shapenetcore_partanno_segmentation_benchmark_v0.zip">here</a>(635MB)
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+    </tr>
+
+<!--
+    <TR>
+      <TD>
+        <H1>Acknowledgements</H1>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD>
+	    <P align="justify">We would like to thank Guowei Wan for initial experiments on this project and Dror Aiger for inspiring discussions.</P>
+	  </TD>
+    </TR>
+
+    <TR>
+      <TD>&nbsp;</TD>
+
+      <TD>&nbsp;</TD>
+
+      <TD>&nbsp;</TD>
+    </TR>
+-->
+
+    <tr>
+      <td>
+        <h1>BibTex</h1>
+	@article{Yi16,<br> 
+Author = {Li Yi and Vladimir G. Kim and Duygu Ceylan and I-Chao Shen and Mengyan Yan and Hao Su and Cewu Lu and Qixing Huang and Alla Sheffer and Leonidas Guibas}, <br>
+Journal = {SIGGRAPH Asia},<br> 
+Title = {A Scalable Active Framework for Region Annotation in 3D Shape Collections}, <br>
+Year = {2016}}  
+      </td>
+    </tr>
+
+<!--
+    <TR>
+      <TD><CODE>@INPROCEEDINGS{2D3DFusion2011,<BR>
+      &nbsp;&nbsp;title = {2D-3D Fusion for Layer Decomposition of Urban Facades},<BR>
+      &nbsp;&nbsp;author = {Hao Su and Qixing Huang and Niloy J. Mitra and Yangyan Li and Leonidas Guibas},<BR>
+	  &nbsp;&nbsp;booktitle = {Computer Vision (ICCV), 2011 IEEE International Conference on},<BR>
+      &nbsp;&nbsp;pages = {882-889},<BR>
+      &nbsp;&nbsp;year = {2011},<BR>
+	  &nbsp;&nbsp;month = November,<BR>
+	  &nbsp;&nbsp;address = {Barcelona, Spain} <BR>
+	  &nbsp;&nbsp;doi={10.1109/ICCV.2011.6126329}, <br>
+	  &nbsp;&nbsp;ISSN={1550-5499},<br>
+      }</CODE></TD>
+    </TR>
+
+    <TR>
+      <TD>&nbsp;</TD>
+
+      <TD>&nbsp;</TD>
+
+      <TD>&nbsp;</TD>
+    </TR>
+-->
+  </tbody></table>
+
+
+
+</body></html>
